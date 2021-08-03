@@ -25,7 +25,7 @@
     // },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
-    }, 
+    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
@@ -55,9 +55,6 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "network": {
         "interface": "wlp59s0", // (Optional) To force the use of this interface

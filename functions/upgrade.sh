@@ -11,7 +11,7 @@ function upgrade_all() {
   upgrade_kubeseal "0.15.0"
   upgrade_vegeta "12.8.4"
   upgrade_golangci-lint "1.40.1"
-  upgrade_flux "1.22.2"
+  upgrade_flux2 "0.15.3"
 }
 
 
@@ -155,12 +155,16 @@ function upgrade_golangci-lint() {
 	fi
 }
 
-function upgrade_flux() {
+function upgrade_flux2() {
 	local VERSION="${1}"
-  local URL="https://github.com/fluxcd/flux/releases/download/${VERSION}/fluxctl_linux_amd64"
-  local FILENAME="$(basename ${URL})"
-  curl -L -o "${BIN_DIR}/flux" "${URL}"
-  chmod +x "${BIN_DIR}/flux"
+	if [[ -z ${VERSION} ]]; then
+		echo "Please, specify a version (example: 12.8.4)"
+	else
+    local URL="https://github.com/fluxcd/flux2/releases/download/v${VERSION}/flux_${VERSION}_linux_amd64.tar.gz"
+    local FILENAME="$(basename ${URL})"
+    curl -L -o "/tmp/${FILENAME}" "${URL}"
+		tar -xvzf "/tmp/${FILENAME}" -C "${BIN_DIR}" "flux"
+	fi
 }
 
 

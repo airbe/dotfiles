@@ -44,7 +44,7 @@
 		"vendors/"
 	],
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
 	"default_line_ending": "unix",
 	"dictionary": "Packages/Language - French - Français/fr_FR (modern).dic",
 	"drag_text": false,
@@ -52,6 +52,7 @@
 	"enable_tab_scrolling": false,
 	"fold_buttons": false,
 	"font_size": 11,
+	"font_face": "FreeMono",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,

@@ -22,7 +22,8 @@ set $term alacritty
 set $menu dmenu_path | wofi --show drun | xargs swaymsg exec --
 set $passmenu ~/bin/wofi-pass
 
-set $lock "swaylock -f -c 000000"
+set $lock "swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr '%a %e.%m.%Y' --timestr '%k:%M'"
+set $manuallock exec bash ~/.config/sway/lockscreen.sh
 
 # Window borders
 # default_border pixel 1
@@ -49,10 +50,10 @@ for_window [class="Pavucontrol"] floating enable
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 7200 'swaylock -f -c 000000' \
-         timeout 7600 'swaymsg "output * dpms off"' \
+         timeout 600 'swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"' \
+         timeout 570 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -110,7 +111,7 @@ input type:keyboard {
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
-    bindsym $mod+Shift+d exec $lock
+    bindsym $mod+Shift+d exec $manuallock
 
     bindsym $mod+p exec $passmenu
 #

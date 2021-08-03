@@ -31,11 +31,17 @@
 }
 {
 	output eDP-1 disable
-	output DP-6 mode 2560x1440 position 0,0
-	output DP-9 mode 2560x1440 position 2560,0
+	output DP-6 enable mode 2560x1440 position 0,0
+	output DP-9 enable mode 2560x1440 position 2560,0
 }
 {
 	output eDP-1 disable
-	output DP-6 mode 2560x1440 position 0,0
-	output DP-9 disable
+	output DP-5 enable mode 2560x1440 position 2560,0
+	output DP-9 enable mode 2560x1440 position 0,0
 }
+{
+	output eDP-1 disable
+	output DP-4 enable mode 2560x1440 position 2560,0
+	output DP-10 enable mode 2560x1440 position 0,0
+}
+

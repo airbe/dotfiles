@@ -12,6 +12,7 @@ alias vim='nvim'
 alias video='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 alias firefox='swaymsg exec "unset DISPLAY && firefox"'
 alias chrome='swaymsg exec "google-chrome-stable -enable-features=UseOzonePlatform -ozone-platform=wayland"'
+alias chromium='swaymsg exec "chromium --enable-features=UseOzonePlatform --ozone-platform=wayland"'
 # Kubectl
 function loadkctlalias() {
   for i in pods services ingresses deployments configmaps secrets; do
