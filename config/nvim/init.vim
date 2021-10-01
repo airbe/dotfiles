@@ -77,5 +77,15 @@ let g:vimwiki_list = [{'path': '~/Documents/wiki/', 'syntax': 'markdown', 'ext':
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 " </plugins>
 
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
+
 colorscheme codedark
 execute 'source ' . $HOME . '/.config/nvim/statusline.vim'
