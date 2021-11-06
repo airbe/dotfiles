@@ -8,6 +8,8 @@
 		"Ansible",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
+		"Gofmt",
+		"Golang Build",
 		"Language - French - Français",
 		"LSP",
 		"Package Control",

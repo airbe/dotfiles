@@ -2,6 +2,8 @@
 
 CWD="$(pwd)"
 
+mkdir -p "${HOME}/Bin"
+ln -sf ${CWD}/scripts/fzfpass ${HOME}/Bin/fzfpass
 ln -sf ${CWD}/gitconfig ${HOME}/.gitconfig
 ln -sf ${CWD}/tmux.conf ${HOME}/.tmux.conf
 ln -sf ${CWD}/bash_profile ${HOME}/.bash_profile

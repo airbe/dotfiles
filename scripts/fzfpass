@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+list_passwords() {
+  gfind $PASSWORD_STORE_DIR -type f ! -path "*.git*" -printf '%P\n'|sed s'|.gpg$||'
+}
+
+if [ "$#" -ne 0 ]
+then
+    pass $*
+else
+    PASSWORD_FILE="$(list_passwords|fzf)"
+    echo "$(basename "$PASSWORD_FILE")"
+    if command -v pbcopy > /dev/null 2>&1; then
+      pass $PASSWORD_FILE|pbcopy
+    else
+      pass $PASSWORD_FILE
+    fi
+fi

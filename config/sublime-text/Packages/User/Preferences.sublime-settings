@@ -50,7 +50,7 @@
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
 	"fold_buttons": false,
-	"font_size": 11,
+	"font_size": 12,
 	"font_face": "Menlo",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,

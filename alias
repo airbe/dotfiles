@@ -4,3 +4,4 @@ alias ls="ls -rtlh"
 alias la="ls -rtlha"
 alias fzf='fzf --reverse --border --height 40% --inline-info'
 alias vim='nvim'
+alias pass='fzfpass'
