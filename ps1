@@ -17,4 +17,4 @@ if command -v kubectl >/dev/null 2>&1; then
     return "${exit}"
   }
 fi
-export PS1="${Green}\u${NC}@${Blue}\h${NC} \w${Cyan}$(__git_ps1)${NC} ${Cyan}$(__kube_ps1)${NC} \n$ "
+export PS1="${Green}\u${NC}@${Blue}\h${NC} \w${Cyan}\$(__git_ps1)${NC} ${Cyan}\$(__kube_ps1)${NC} \n$ "
