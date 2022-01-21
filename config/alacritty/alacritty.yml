@@ -1,0 +1,8 @@
+font:
+  normal:
+    family: Menlo   
+  # Font size
+  size: 12
+
+  # Better font rendering for mac
+  use_thin_strokes: true

@@ -12,3 +12,4 @@ ln -sf ${CWD}/config/sublime-text/Packages/User/Preferences.sublime-settings ${H
 ln -sf ${CWD}/config/sublime-text/Packages/User/Package\ Control.sublime-settings ${HOME}/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.sublime-settings
 ln -sf ${CWD}/config/sublime-text/Packages/User/GitBlame.py ${HOME}/Library/Application\ Support/Sublime\ Text/Packages/User/GitBlame.py
 ln -sf ${CWD}/config/nvim ${HOME}/.config/
+ln -sf ${CWD}/config/alacritty ${HOME}/.config/
