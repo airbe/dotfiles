@@ -4,8 +4,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-unset DISPLAY # fix firefox (use wayland instead of x11)
-
 export GPG_TTY=$(tty)
 export HISTSIZE=10000
 export HISTCONTROL=ignorespace:erasedups
