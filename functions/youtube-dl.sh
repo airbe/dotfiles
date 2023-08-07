@@ -1,4 +1,4 @@
-#!/usr/bim/env bash
+#!/usr/bin/env bash
 
 function youdlplaylist() {
   local URL="$1"
