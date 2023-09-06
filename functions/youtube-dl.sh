@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-function youdlplaylist() {
+youdlplaylist() {
   local URL="$1"
   youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' $URL
 }
 
-function youdlvideo() {
+youdlvideo() {
   local URL="$1"
   youtube-dl -o '%(title)s.%(ext)s' --restrict-filenames $URL
 }
