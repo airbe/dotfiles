@@ -1,27 +1,22 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
+    "height": 35, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["hyprland/workspaces", "idle_inhibitor"],
+    "modules-left": ["idle_inhibitor", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "backlight", "network", "cpu", "memory", "temperature", "battery", "tray", "clock"],
      "hyperland/workspaces": {
-         "disable-scroll": true,
          "on-click": "activate",
          "format": "{icon}",
-         "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
-         "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
+         "on-scroll-up": "hyprctl dispatch workspace e-1 > /dev/null",
+         "on-scroll-down": "hyprctl dispatch workspace e+1 > /dev/null",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
+            "active": "",
+            "default": "",
+         },
+         "active-only": true,
+         "all-outputs": false
      },
     "keyboard-state": {
         "numlock": false,
