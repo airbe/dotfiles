@@ -10,6 +10,7 @@ ln -sf "${CWD}/bashrc" "$HOME/.bashrc"
 for i in $(/bin/ls ./config)
 do
   rm -rf "$HOME/.config/$i"
+  echo "${CWD}/config/$i --> $HOME/.config/$i"
   ln -sf "${CWD}/config/$i" "$HOME/.config/$i"
 done
 
